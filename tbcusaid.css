@@ -35,27 +35,48 @@ main {
     display:flex;
 }
 
-.headerSection {
-    background-color: rgba(26, 30, 31, 1);
-}
-
 .between {
     justify-content: space-between;
 }
 
+/* header styles */
+.headerSection {
+    background-color: rgba(26, 30, 31, 1);
+}
+
+.header {
+    height: 84px;
+}
+
+
 .list {
     height: 100%;
     list-style: none;
-    padding: 20px;
     align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.list a{
+    text-decoration: white;
+}
+
+.list a:active{
+    color: rgba(0, 173, 238, 1);
+}
+
+.list a:visited{
+    color: rgba(0, 173, 238, 1);
 }
 
 .navContent {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: HelveticaNeue, Helvetica Neue, helvetica, Sans-Serif;
     color: white;
-    padding: 20px;
+    line-height: 26px;
 }
 
-.navContent :hover {
-    color: blue;
+.navContent:hover {
+    color: rgba(0, 173, 238, 1);
+    cursor: pointer;
 }
