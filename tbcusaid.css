@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: HelveticaNeue, Helvetica Neue, helvetica, Sans-Serif;
+    transition: 0.4s;
 }
 
 main {
@@ -39,7 +41,13 @@ main {
     justify-content: space-between;
 }
 
+.column {
+    flex-direction: column;
+}
+
+
 /* header styles */
+
 .headerSection {
     background-color: rgba(26, 30, 31, 1);
 }
@@ -47,7 +55,6 @@ main {
 .header {
     height: 84px;
 }
-
 
 .list {
     height: 100%;
@@ -71,12 +78,51 @@ main {
 
 .navContent {
     font-size: 16px;
-    font-family: HelveticaNeue, Helvetica Neue, helvetica, Sans-Serif;
     color: white;
     line-height: 26px;
 }
 
 .navContent:hover {
     color: rgba(0, 173, 238, 1);
+    cursor: pointer;
+}
+
+/* image & about styles*/
+
+.image-people {
+    background-image: url(https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_980,h_352,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg);
+    height: 352px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section2 {
+    background-color: rgba(43, 43, 43, 1);
+    padding: 70px 0px;
+}
+
+.text-section1-1 {
+    font-size: 42px;
+    color: rgba(244, 244, 244, 1);
+    font-weight: 900;
+}
+
+.text-section1-2 {
+    font-size: 28px;
+    color: rgba(244, 244, 244, 1);
+    line-height: 1.6em;
+}
+
+.text-section1-3 {
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+    color: rgba(0, 173, 238, 1);
+    display: inline-block;
+}
+
+.text-section1-3:hover {
+    color: rgba(85, 85, 85, 1);
     cursor: pointer;
 }
