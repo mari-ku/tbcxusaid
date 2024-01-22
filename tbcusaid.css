@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    max-width: 100%;
+}
+
+.box-size {
+    width: 100%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verticalCenter {
+    align-items: center;
+}
+
+.horizontalCenter {
+    justify-content: center;
+}
+
+.flex {
+    display:flex;
+}
+
+.headerSection {
+    background-color: rgba(26, 30, 31, 1);
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.list {
+    height: 100%;
+    list-style: none;
+    padding: 20px;
+    align-items: center;
+}
+
+.navContent {
+    font-size: 14px;
+    color: white;
+    padding: 20px;
+}
+
+.navContent :hover {
+    color: blue;
+}
