@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./tbcusaid.css">
+    <script type="text/javascript" src="./index.js"></script>
 </head>
 <body>
     <main>
@@ -279,10 +280,42 @@
     
         <section>partners
     
-    
         </section>
     
-        <section>questions
+        <section class="box-size questions-background flex horizontalCenter">
+            <div class="content">
+                <div class="questionsWidth">
+                    <div class="flex between">
+                        <div>
+                            <P class="often">ხშირად დასმული კითხვები</P>
+                        </div>
+                        <div class="allquestions">
+                            <a>ყველა შეკითხვა</a>
+                        </div>
+                    </div>
+    
+                    <div class="accordion">
+                        <div class="accordion-section">
+                            <div class="accordion-section-header" onclick="toggleSection(this)">Section 1</div>
+                            <div class="accordion-section-content">
+                                <p>Content for section 1 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-section">
+                            <div class="accordion-section-header" onclick="toggleSection(this)">Section 2</div>
+                            <div class="accordion-section-content">
+                                <p>Content for section 2 goes here.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-section">
+                            <div class="accordion-section-header" onclick="toggleSection(this)">Section 2</div>
+                            <div class="accordion-section-content">
+                                <p>Content for section 2 goes here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     
         </section>
     

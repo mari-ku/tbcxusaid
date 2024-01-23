@@ -201,3 +201,53 @@ main {
 
 /* partners section styles */
 
+.questions-background {
+    background-color: rgba(22, 22, 22, 1);
+}
+
+.questionsWidth {
+    padding: 30px 40px;
+}
+
+.often {
+    padding: 50px 50px 50px 0;
+    color: #DBDBDB;
+    font-size: 24px;
+}
+
+.allquestions {
+    padding: 50px 0 50px 50px;
+    font-size: 18px;
+    color: rgba(0, 173, 238, 1);
+    font-weight: 700;
+}
+
+.allquestions a:hover {
+    color: rgba(85, 85, 85, 1);
+    cursor: pointer;
+} 
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-section {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    overflow: hidden; /* Hide overflow for smooth transition */
+    transition: max-height 0.3s ease; /* Add a smooth transition effect */
+}
+
+.accordion-section-header {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.accordion-section-content {
+    max-height: 0;
+    padding: 10px;
+    overflow: hidden;
+    display: none; /* Initially hide the content */
+    transition: max-height 0.3s ease; /* Add a smooth transition effect */
+}
