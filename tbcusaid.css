@@ -206,6 +206,8 @@ main {
 
 /* partners section styles */
 
+/* questions section styles */
+
 .questions-background {
     background-color: rgba(22, 22, 22, 1);
 }
@@ -214,52 +216,46 @@ main {
     padding: 30px 40px 70px;
 }
 
-.often {
-    padding: 70px 50px 30px 0;
-    color: #DBDBDB;
-    font-size: 24px;
+/* often & allquestions*/
+
+.faq-item {
+    margin-bottom: 10px;
 }
 
-.allquestions {
-    padding: 70px 0 30px 50px;
-    font-size: 20px;
-    color: rgba(0, 173, 238, 1);
-    font-weight: 700;
+.faq-item {
+    margin-bottom: 10px;
 }
 
-.allquestions a:hover {
-    color: rgba(85, 85, 85, 1);
+.question {
     cursor: pointer;
-} 
-.accordion {
     display: flex;
-    flex-direction: column;
-}
-
-.accordion-section {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 5px;
-    padding: 18px 0;
-    font-size: 18px;
-    overflow: hidden; /* Hide overflow for smooth transition */
-    transition: max-height 0.3s ease; /* Add a smooth transition effect */
-}
-
-.accordion-section-header {
-    padding: 10px;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
     background-color: rgba(22, 22, 22, 1);
-    color: #DBDBDB;
-}
-
-.accordion-section-content {
-    max-height: 0;
-    padding: 10px;
+    border-bottom: 1px solid #ccc;
     color: #DBDBDB;
     overflow: hidden;
-    display: none; /* Initially hide the content */
-    transition: max-height 0.3s ease; /* Add a smooth transition effect */
 }
+
+.answer {
+    display: none;
+    padding: 10px;
+    border: none;
+    background-color: rgba(22, 22, 22, 1);
+    color: #DBDBDB;
+    border-top: none;
+    overflow: hidden;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
 
 /* footer styles */
 
@@ -312,3 +308,4 @@ main {
     color: white;
     background-color: rgba(0, 173, 238, 1);
 }
+
