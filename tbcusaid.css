@@ -206,9 +206,64 @@ main {
 
 /* partners section styles */
 
+.slider-area {
+    background-color: rgba(43, 43, 43, 1);
+}
+
+.partners-p {
+    font-size: 28px;
+    color: #DBDBDB;
+    padding: 30px 0px 40px;
+}
+
+.slider-container {
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    height: 224px;
+    margin-bottom: 30px;
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+}
+
+
+button {
+    color: white;
+    align-self: center;
+    line-height: 24px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    justify-self: start;
+}
+
+.next {
+    justify-self: end;
+}
+
 /* questions section styles */
 
-.questions-background {
+.questions-color {
     background-color: rgba(22, 22, 22, 1);
 }
 
@@ -305,7 +360,7 @@ main {
 }
 
 .margin-1 {
-    margin-top: 17px; /* Add space between columns in each row */
+    margin-top: 17px;
 }
 
 .margin-2 {
@@ -317,7 +372,7 @@ main {
     background-color: rgba(26, 30, 31, 1);
     color: #DBDBDB;
     font-weight: 550;
-    flex: 1; /* Distribute space equally among columns */
+    flex: 1;
 }
 
 .fb-link {
