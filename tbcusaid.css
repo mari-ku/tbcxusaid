@@ -213,10 +213,26 @@ main {
 }
 
 .questionsWidth {
-    padding: 30px 40px 70px;
+    padding: 60px 40px 80px;
 }
 
-/* often & allquestions*/
+.often {
+    font-size: 24px;
+    color: #DBDBDB;
+    padding: 40px 0px 20px;
+}
+
+.allquestions {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(0, 173, 238, 1);
+    padding: 40px 0px 20px;
+}
+
+.allquestions a:hover {
+    color: rgba(85, 85, 85, 1);
+    cursor: pointer;
+}
 
 .faq-item {
     margin-bottom: 10px;
@@ -231,7 +247,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 22px 0px;
+    font-size: 18px;
     background-color: rgba(22, 22, 22, 1);
     border-bottom: 1px solid #ccc;
     color: #DBDBDB;
@@ -240,8 +257,10 @@ main {
 
 .answer {
     display: none;
-    padding: 10px;
+    padding: 10px 0px;
     border: none;
+    font-size: 14px / 12.2em;
+    line-height: 27px;
     background-color: rgba(22, 22, 22, 1);
     color: #DBDBDB;
     border-top: none;
@@ -255,6 +274,19 @@ main {
 .open {
     transform: rotate(180deg);
 }
+
+.top-p {
+    padding-bottom: 40px;
+}
+
+.bottom-p {
+    padding-top: 40px;
+}
+
+.just-p {
+    padding: 0px 20px;
+}
+
 
 
 /* footer styles */
