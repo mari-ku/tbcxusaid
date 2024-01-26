@@ -130,6 +130,7 @@ main {
     font-weight: 700;
     color: rgba(0, 173, 238, 1);
     display: inline-block;
+    text-decoration: none;
 }
 
 .text-section1-3:hover {
@@ -243,7 +244,7 @@ main {
 }
 
 
-button {
+#slider button {
     color: white;
     align-self: center;
     line-height: 24px;
@@ -308,6 +309,7 @@ button {
     border-bottom: 1px solid #ccc;
     color: #DBDBDB;
     overflow: hidden;
+    transition: ease-in-out;
 }
 
 .answer {
@@ -381,6 +383,7 @@ button {
 
 .cell3-1 {
     margin-top: 14px;
+    cursor: pointer;
 }
 
 .bottom-row {
@@ -396,3 +399,79 @@ button {
     background-color: rgba(0, 173, 238, 1);
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(43, 43, 43, 1);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#closemenu {
+    width: 21px;
+    height: 21px;
+    fill: #8C8C8C;
+    align-self: flex-end;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#sideMenu h2 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.4em;
+    color: #8C8C8C;
+    letter-spacing: 2px;
+}
+
+.policiesText {
+    padding: 15px 35px;
+    color: #8C8C8C;
+}
+
+.policiesText p {
+    margin: 20px 0px;
+    
+}
+
+#closebuttonbottom {
+    margin: 80px 35px 0px;
+    padding: 20px 0px;
+    border-radius: 5px;
+    border: none;
+    color: rgba(43, 43, 43, 1);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#closebuttonbottom:hover {
+    background-color: rgba(0, 173, 238, 1);
+    color: white;
+    cursor: pointer;
+}
