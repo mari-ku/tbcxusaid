@@ -52,18 +52,14 @@ main {
 
 /* header styles */
 
-.headerSection {
+#header {
     background-color: rgba(26, 30, 31, 1);
-}
-
-.header {
     height: 84px;
-}
-
-.fixed {
     position: fixed;
     top: 0;
     width: 100%;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
 }
 
 .list {

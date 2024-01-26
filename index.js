@@ -21,7 +21,7 @@ function fadeOut(index){
 
 let sliderIndex = 0;
 
-var sliderInterval = setInterval(() => {
+let sliderInterval = setInterval(() => {
     if(sliderIndex !== 2) {
         fadeOut(sliderIndex);
         sliderIndex = sliderIndex + 1;
@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('policies').addEventListener('click', toggleMenu)
 
     document.getElementById('closemenu').addEventListener('click', closeMenu)
+
+    document.addEventListener('scroll', scrollTransparent)
 });
 
 
@@ -86,8 +88,8 @@ function nextSlide() {
 
 
 function toggleMenu() {
-    var sideMenu = document.getElementById('sideMenu');
-    var overlay = document.getElementById('overlay');
+    let sideMenu = document.getElementById('sideMenu');
+    let overlay = document.getElementById('overlay');
 
     // Toggle the menu and overlay visibility
     sideMenu.style.right = (sideMenu.style.right === '0px') ? '-250px' : '0';
@@ -98,13 +100,22 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-    var sideMenu = document.getElementById('sideMenu');
-    var overlay = document.getElementById('overlay');
+    let sideMenu = document.getElementById('sideMenu');
+    let overlay = document.getElementById('overlay');
 
-    // Close the menu and overlay
     sideMenu.style.right = '-50%';
     overlay.style.display = 'none';
 
-    // Restore the background color of the body
+    
     document.body.style.background = '#fff';
+}
+
+function scrollTransparent() {
+    let header = document.getElementById('header');
+
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "rgba(26, 30, 31, 0.9)";
+    } else {
+        header.style.backgroundColor = "rgba(26, 30, 31, 1)";
+    }
 }
