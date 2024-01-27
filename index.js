@@ -119,3 +119,46 @@ function scrollTransparent() {
         header.style.backgroundColor = "rgba(26, 30, 31, 1)";
     }
 }
+
+function updateBurgerIcon() {
+    let burgerIcon = document.getElementById('burger-icon');
+    let burgerMenu = document.getElementById('burger-menu');
+    let burgerNav = document.getElementById('burger-menu-nav');
+    let burgerTop = document.getElementById('burger-top');
+    let burgerBot = document.getElementById('burger-bot');
+    let burgerMid = document.getElementById('burger-mid');
+    let burgerLinks = document.getElementsByClassName('burger-navigation');
+
+    burgerIcon.classList.contains('active') ? burgerIcon.classList.remove('active') : burgerIcon.classList.add('active');
+
+    if (burgerIcon.classList.contains('active')) {
+        burgerTop.classList.remove('burger-top')
+        burgerMid.style.transform = 'rotate(0deg) translate(-0%, -50%)';
+        burgerMid.style.backgroundColor = 'white';
+        burgerBot.classList.remove('burger-bot');
+        burgerMenu.style.opacity = '0';
+        burgerNav.style.transition = 'width 0.4s ease-in-out';
+        burgerNav.style.width = '0px';
+        console.log(burgerLinks)
+        setTimeout(()=>{
+            for (let element of burgerLinks) {
+                element.classList.add('burger-navigation-close');
+            }
+        },100)
+        setTimeout(() => {
+            burgerMenu.style.display = 'none';
+        }, (500));
+    } else {
+        burgerTop.classList.add('burger-top')
+        burgerMid.style.transform = 'rotate(-45deg) translate(-0%, -50%)';
+        burgerMid.style.backgroundColor = '#8C8C8C';
+        burgerBot.classList.add('burger-bot');
+        burgerMenu.style.display = 'block';
+        burgerMenu.style.opacity = '0.5';
+        burgerNav.style.transition = 'width 0.4s ease-in-out';
+        burgerNav.style.width = '60%';
+        for (let element of burgerLinks) {
+            element.classList.remove('burger-navigation-close');
+        }
+    }
+}

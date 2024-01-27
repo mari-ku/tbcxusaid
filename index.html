@@ -10,6 +10,13 @@
 <body>
     <main>
         <section class="flex horizontalCenter" id="header">
+            <div id="burger-menu"></div>
+            <div id="burger-menu-nav" class="flex column">
+                <a class="burger-navigation" href="#">მთავარი</a>
+                <a class="burger-navigation" href="#">TBC IT</a>
+                <a class="burger-navigation" href="#">TBC & USAID</a>
+                <a class="burger-navigation" href="#">რისკები</a>
+            </div>
             <div class="content flex between verticalCenter">
                 <div>
                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.049 -0.035 160.05 35.031" xmlns="http://www.w3.org/2000/svg" viewBox="-0.049 -0.035 160.05 35.031" height="40" width="182" data-type="color" role="presentation" aria-hidden="true">
@@ -41,7 +48,7 @@
                     </svg>
                 </div>
 
-                <nav>
+                <nav class="flex">
                     <ul class="list flex">
                         <li class="navContent"><a>მთავარი</a></li>
                         <li class="navContent"><a>TBC IT</a></li>
@@ -49,6 +56,13 @@
                         <li class="navContent"><a>რისკები</a></li>
                     </ul>
                 </nav>
+            </div>
+            <div>
+                <div id="burger-icon" onclick="updateBurgerIcon()">
+                    <div id="burger-top"></div>
+                    <div id="burger-mid"></div>
+                    <div id="burger-bot"></div>
+                </div>
             </div>
         </section>
     
