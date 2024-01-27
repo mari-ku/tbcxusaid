@@ -2,11 +2,11 @@ function toggleAnswer(question) {
     let answer = question.nextElementSibling;
     let arrow = question.querySelector('.arrow');
     
-    if (answer.style.display === 'block') {
-        answer.style.display = 'none';
+    if (answer.style.height === 'auto') {
+        answer.style.height = '0px';
         arrow.classList.remove('open');
     } else {
-        answer.style.display = 'block';
+        answer.style.height = 'auto';
         arrow.classList.add('open');
     }
 }
@@ -60,7 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('scroll', scrollTransparent)
 });
 
-
+function dotSlide(index){
+    switch(index) {
+        case 0: 
+            fadeIn(0);
+            fadeOut(1);
+            fadeOut(2);
+            break;
+        case 1: 
+            fadeIn(1);
+            fadeOut(0);
+            fadeOut(2);
+            break;
+        case 2: 
+            fadeIn(2);
+            fadeOut(0);
+            fadeOut(1);
+            break;     
+    }
+}
 
 function prevSlide() {
     if(sliderIndex !== 0) {
@@ -103,10 +121,13 @@ function closeMenu() {
     let sideMenu = document.getElementById('sideMenu');
     let overlay = document.getElementById('overlay');
 
-    sideMenu.style.right = '-50%';
-    overlay.style.display = 'none';
-
-    
+    if (window.innerWidth < 600) {
+        sideMenu.style.right = '-280px';
+        overlay.style.display = 'none';
+    } else {
+        sideMenu.style.right = '-50%';
+        overlay.style.display = 'none';
+    }
     document.body.style.background = '#fff';
 }
 
@@ -127,27 +148,19 @@ function updateBurgerIcon() {
     let burgerTop = document.getElementById('burger-top');
     let burgerBot = document.getElementById('burger-bot');
     let burgerMid = document.getElementById('burger-mid');
-    let burgerLinks = document.getElementsByClassName('burger-navigation');
 
-    burgerIcon.classList.contains('active') ? burgerIcon.classList.remove('active') : burgerIcon.classList.add('active');
+    burgerIcon.classList.toggle('active');
 
-    if (burgerIcon.classList.contains('active')) {
+    if (!burgerIcon.classList.contains('active')) {
         burgerTop.classList.remove('burger-top')
         burgerMid.style.transform = 'rotate(0deg) translate(-0%, -50%)';
         burgerMid.style.backgroundColor = 'white';
         burgerBot.classList.remove('burger-bot');
         burgerMenu.style.opacity = '0';
-        burgerNav.style.transition = 'width 0.4s ease-in-out';
-        burgerNav.style.width = '0px';
-        console.log(burgerLinks)
+        burgerNav.style.right = '-100%';
         setTimeout(()=>{
-            for (let element of burgerLinks) {
-                element.classList.add('burger-navigation-close');
-            }
-        },100)
-        setTimeout(() => {
             burgerMenu.style.display = 'none';
-        }, (500));
+        },500)
     } else {
         burgerTop.classList.add('burger-top')
         burgerMid.style.transform = 'rotate(-45deg) translate(-0%, -50%)';
@@ -155,10 +168,6 @@ function updateBurgerIcon() {
         burgerBot.classList.add('burger-bot');
         burgerMenu.style.display = 'block';
         burgerMenu.style.opacity = '0.5';
-        burgerNav.style.transition = 'width 0.4s ease-in-out';
-        burgerNav.style.width = '60%';
-        for (let element of burgerLinks) {
-            element.classList.remove('burger-navigation-close');
-        }
+        burgerNav.style.right = '0';
     }
 }

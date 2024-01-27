@@ -66,7 +66,7 @@
             </div>
         </section>
     
-        <section class="box-size">
+        <section class="box-size sec-2">
             <div class="image-people box-size flex horizontalCenter">
                 <div class="content flex column horizontalCenter text-section1-1">
                     <p>TBC x USAID</p>
@@ -88,9 +88,8 @@
     
         <section class="coursesSection flex horizontalCenter">
             <div class="content">
-                <div>
-                    <span class="courses-text">სასწავლო კურსები</span>
-                </div>
+                <h2 class="courses-text">სასწავლო კურსები</h2>
+                
                 <div class="course-grid">
                     <div class="grid-item">
                         <div><img class="grid-image" src="https://static.wixstatic.com/media/dd97f4_6f93a2a737b14a32ae26b17f51e6dbf1~mv2.jpg/v1/fill/w_300,h_150,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/dd97f4_6f93a2a737b14a32ae26b17f51e6dbf1~mv2.jpg"></div>
@@ -297,8 +296,14 @@
             </div>      
             <div class="box-size flex horizontalCenter"  id="slider">
                 <button class="prev" onclick="prevSlide()">❮</button>
+                <button class="next" onclick="nextSlide()">❯</button>
                 <div class="content">
                     <div class="slider">
+                        <div class="slider-nav flex between">
+                            <span id="dot-1" onclick="dotSlide(0)"></span>
+                            <span id="dot-2" onclick="dotSlide(1)"></span>
+                            <span id="dot-3" onclick="dotSlide(2)"></span>
+                        </div>
                         <div class="slide" id="slide-0">
                             <img src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_246,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png">
                             <img src="https://static.wixstatic.com/media/93e8a3_eaf33552ffd5463e96a5f776dda00111~mv2.png/v1/fill/w_241,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20horiz.png">
@@ -314,7 +319,6 @@
                         </div>
                     </div>
                 </div>
-                <button class="next" onclick="nextSlide()">❯</button>
             </div>
         </section>
 
@@ -322,9 +326,7 @@
             <div class="content">
                 <div class="questionsWidth">
                     <div class="flex between">
-                        <div>
-                            <P class="often">ხშირად დასმული კითხვები</P>
-                        </div>
+                            <h3 class="often">ხშირად დასმული <span>კითხვები</span></h3>
                         <div class="allquestions">
                             <a>ყველა შეკითხვა</a>
                         </div>
@@ -370,6 +372,9 @@
                             <p class="bottom-p">პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია თიბისი ბანკისა და USAID-ის მიერ.</p>
                         </div>
                     </div>
+                    <div class="allquestions-mobile">
+                        <a>ყველა შეკითხვა</a>
+                    </div>
                 </div>
             </div>
     
@@ -380,9 +385,12 @@
             <div class="content flex column table">
                 <div class="table-row margin-1">
                     <div class="table-cell"><img src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_106,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png"></div>
-                    <div class="table-cell flex end">
-                        <img class="fb-link" src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png">
-                        <img src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png">
+                    <div class="table-cell flex end social-area">
+                        <button  class="contact-mobile">მოგვწერეთ</button>
+                        <div>   
+                            <img class="fb-link" src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png">
+                            <img src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png">
+                        </div>
                     </div>
                 </div>
                 <div class="table-row margin-2">
@@ -391,7 +399,7 @@
                 <div class="table-row">
                     <div class="table-cell bottom-row cell3-1"><a id="policies">წესები და პირობები</a></div>
                     
-                    <div class="table-cell bottom-row flex end"><a><button>მოგვწერეთ</button></a></div>
+                    <div class="table-cell bottom-row flex end"><a><button  class="contact">მოგვწერეთ</button></a></div>
                 </div>
                 
                 <div class="flex column" id="sideMenu">
@@ -401,6 +409,7 @@
                             <path d="M531.936 536.904L323.094 328.063 114.253 536.904l-32.064-32.062L291.032 296 82.189 87.157l32.064-32.061 208.842 208.842L531.936 55.096 564 87.157 355.155 296 564 504.842l-32.064 32.062z"></path>
                         </g>
                     </svg>
+                    
                     <div class="policiesText">
                         <h2 >წესები და პირობები</h2>
                         <p>წინამდებარე ვებ-გვერდის გამოყენება რეგულირდება სს „თიბისი ბანკის“ (საიდენტიფიკაციო ნომერი: 204854595, მისამართი: თბილისი, კ. მარჯანიშვილის ქ. #7) მიერ დადგენილი წესებითა და პირობებით.</p>
