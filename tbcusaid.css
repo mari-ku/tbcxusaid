@@ -651,6 +651,13 @@ body {
     .prev{
         margin-bottom: 140px;
     }
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .grid-item {
+        justify-self: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
