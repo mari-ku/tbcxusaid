@@ -122,10 +122,10 @@ function closeMenu() {
     let overlay = document.getElementById('overlay');
 
     if (window.innerWidth < 600) {
-        sideMenu.style.right = '-280px';
+        sideMenu.style.right = '-100%';
         overlay.style.display = 'none';
     } else {
-        sideMenu.style.right = '-50%';
+        sideMenu.style.right = '-100%';
         overlay.style.display = 'none';
     }
     document.body.style.background = '#fff';
@@ -171,3 +171,20 @@ function updateBurgerIcon() {
         burgerNav.style.right = '0';
     }
 }
+let lastScrollTop = 0;
+function handleScroll() {
+    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if(screenWidth<=600) {
+        let header = document.getElementById("header");
+        let scrollTop = window.scrollY;
+        if (scrollTop > lastScrollTop && scrollTop>69) {
+            header.style.top = '-100%';
+        } else {
+            header.style.top = '0';
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }
+}
+
+window.addEventListener("scroll", handleScroll);

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: HelveticaNeue, Helvetica Neue, helvetica, Sans-Serif;
+    font-family: Noto Sans Georgian, sans-serif;
     transition: 0.4s;
 }
 
@@ -59,6 +59,7 @@ main {
     top: 0;
     width: 100%;
     transition: background-color 0.3s ease;
+    transition: top 0.3s ease-in-out;
     z-index: 1000;
 }
 
@@ -179,11 +180,14 @@ main {
     color: #fff;
     text-decoration: none;
     display: block;
-    padding: 5px;
-    margin-right: 10px;
+    padding: 15px;
+    margin-right: 15px;
     white-space: nowrap;
 }
 
+#burger-menu-nav a:visited {
+    color: rgba(0, 173, 238, 1);
+}
 
 #closeburger {
     width: 21px;
@@ -418,7 +422,7 @@ main {
 
 .faq-item {
     margin-bottom: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(53, 49, 49);
 }
 
 .question {
@@ -436,6 +440,7 @@ main {
 
 .answer {
     height: 0px;
+    margin-bottom: 30px;
     overflow: hidden;
     transition: 0.3s ease-in-out;
     border: none;
@@ -504,6 +509,10 @@ main {
     font-weight: 550;
     flex: 1;
 }
+.social-icons img{
+    cursor: pointer;
+    border-radius: 50%;
+}
 
 .fb-link {
     margin-right: 10px;
@@ -542,7 +551,7 @@ body {
 #sideMenu {
     position: fixed;
     top: 0;
-    right: -50%;
+    right: -100%;
     width: 50%;
     height: 100%;
     background: rgba(43, 43, 43, 1);
@@ -569,6 +578,7 @@ body {
 #closemenu {
     width: 21px;
     height: 21px!important;
+    position: absolute;
     fill: #8C8C8C;
     align-self: flex-end;
     margin: 10px;
@@ -612,8 +622,44 @@ body {
 }
 
 /* responsive styles */
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    .content{
+        padding: 0px 20px;
+    }
+    .list {
+        gap: 25px;
+    }
+    
+    .partners-p{
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+    #slider {
+        height: 371px;
+    }
+    #slider .slide {
+        gap: 30px;
+        flex-direction: column;
+    }
+    .slider-nav {
+        bottom: -100px;
+    }
+    .next {
+        margin-bottom: 140px;
+    }
+    .prev{
+        margin-bottom: 140px;
+    }
+}
 
 @media screen and (max-width: 600px) {
+    #header {
+        height: 69px;
+    }
+    .sec-2 {
+        margin-top: 69px    ;
+    }
     .content{
         padding: 0px 20px;
     }
@@ -636,26 +682,6 @@ body {
     }
     .courses-text {
         text-align: center;
-    }
-    .partners-p{
-        margin-bottom: 20px;
-        padding-top: 20px;
-    }
-    #slider {
-        height: 371px;
-    }
-    #slider .slide {
-        gap: 30px;
-        flex-direction: column;
-    }
-    .slider-nav {
-        bottom: -100px;
-    }
-    .next {
-        margin-bottom: 140px;
-    }
-    .prev{
-        margin-bottom: 140px;
     }
     .allquestions {
         display: none;
@@ -699,12 +725,27 @@ body {
         margin-top: 25px;
         flex-direction: column;
         gap: 25px;
+        order: 1;
+    }
+    .margin-2 {
+        order: 3;
+    }
+    .margin-2 div {
+        margin-bottom: 20px;
+    }
+    .margin-3 {
+        order: 2;
+    }
+    .margin-3 div {
+        margin-bottom: 0px;
     }
     .social-area {
         justify-content: space-between;
     }
     #sideMenu {
         width: 280px;
+        max-width: 100%;
+        right: -100%;
     }
     #sideMenu h2{
         font-size: 20px;
@@ -714,11 +755,3 @@ body {
         font-size: 14px;
     }
 }
-
-@media screen and (min-width: 601px) and (max-width: 1023px) { 
-    
- }
-
-@media screen and (min-width: 1024px) {
-    
- }
